@@ -8,6 +8,7 @@ up:
 plugins:
 	$(EXEC_PHP) pip install mkdocs-render-swagger-plugin 
 	$(EXEC_PHP) pip install mkdocs-awesome-pages-plugin 
+	$(EXEC_PHP) pip install mkdocs-mermaid2-plugin
 
 restart:
 	$(DOCKER_COMPOSE) restart
