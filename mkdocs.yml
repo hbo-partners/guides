@@ -1,0 +1,22 @@
+site_name: Guide d'exploitation
+theme:
+  name: material
+  # extra_css:
+  #   - stylesheets/extra.css
+  features:
+    - content.tabs.link
+    - content.code.annotate
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+  # markdown_extensions:
+  #   - tables
+
+plugins:
+  - awesome-pages
+  - render_swagger
+  - mermaid2
+
+# !!swagger swagger.json!!
+# !!swagger-http https://raw.githubusercontent.com/akeneo/pim-api-docs/master/content/swagger/akeneo-web-api.json!!

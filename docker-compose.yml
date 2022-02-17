@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+
+  mkdocs:
+    image: squidfunk/mkdocs-material
+    volumes: 
+      - ${PWD}:/docs
+    ports:
+      - 8000:8000
+    # environment:
+    #   SERVICE_NAME: ${SERVICE_NAME}
+    networks: 
+      - network
+
+networks:
+  network:
