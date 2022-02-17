@@ -1,0 +1,7 @@
+nav:
+    - home.md
+    - catalog.md
+    - auth.md
+    - account.md
+    - checkout.md
+    - landing.md

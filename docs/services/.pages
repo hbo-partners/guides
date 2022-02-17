@@ -1,3 +1,7 @@
 nav:
     - checkout.md
     - messages.md
+    - attributes.md
+    - account.md
+    - profiles.md
+    - ups.md
