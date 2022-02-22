@@ -2,6 +2,21 @@
 
 Ce service est dédiée à la gestion des abonnements. Les fomules liés aux abonnements correspondent
 
+
+
+!!! danger "Attention"    
+    
+    Chacun des prix associés à une souscription doivent obligatoirement être flaggués avec la mention `quantity` dans Stripe.
+
+        {
+            "id": "price_1KVZkS2eZvKYlo2CKv9tTeBp",
+            ...
+            "metadata": {
+                "quantity": "3"
+            },
+            ...
+        }
+
 * Ces abonnements sont achetés via le checkout. *Voir le parcours `checkout` pour plus d'informations*. 
 * Les abonnements sont expirables avec une date anniversaire qui doit être fixée dans *Stripe*
 * Les abonnements permettent de publier une annonce mais ne permette pas de booster une annonce déjà publiée

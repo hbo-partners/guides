@@ -2,9 +2,25 @@
 
 Ce service est dédiée à la gestion des credits (UPS). Chaque utilisation de crédit ou de multiples de crédits débloque des fonctionnalités pour l'annonceur.
 
+
+!!! danger "Attention"    
+    
+    Chacun des prix associés à un produits(crédits) doivent obligatoirement être flaggués avec la mention `quantity` dans Stripe.
+
+        {
+            "id": "price_1KVZkS2eZvKYlo2CKv9tTeBp",
+            ...
+            "metadata": {
+                "quantity": "3"
+            },
+            ...
+        }
+
+    
 !!! warning "Attention"
 
     Les crédits nont pas de date d'expiration.
+
 
 
 * Ces crédits sont achetés via le checkout. *Voir le parcours `checkout` pour plus d'informations*. 
