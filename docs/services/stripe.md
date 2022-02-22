@@ -38,8 +38,18 @@ Toutes les règles de gestion suivantes sont à paramétrer dans Stripe et les p
 ### Schema
 
 ```mermaid
-graph TD
-A[Client] --> B[Load Balancer]
-B --> C[Server01]
-B --> D[Server02]
+
+sequenceDiagram
+    User Agent ->>+ Server: Begin checkout
+    Server ->>+ Stripe: Ask checkout session
+    Stripe ->>+ Stripe: Create checkout session
+    Stripe ->>+ Server: Return session url
+    Server ->>+ User Agent: Return session url
+    User Agent ->>+ Stripe: Redirect to Stripe Checkout
+    Stripe ->>+ Stripe: Payment
+    Stripe ->>+ Aws: Hook trigger called
+    Aws ->>+ Aws: Event customer.created update Profile service
+    Aws ->>+ Aws: Event session.checkout.completed update UPS/Subscription service
+    Stripe ->>+ User Agent: Redirect Page success
+
 ```

@@ -50,3 +50,7 @@ https://editor.swagger.io/
 
 // Search pip plugin
 https://pypi.org/search/?q=mkdocs-mermaid2-plugin&o=
+
+// Django:: Basic Authentication 
+https://github.com/farnetani/django_material_mkdocs/blob/master/mkdocs.yml
+// /Django

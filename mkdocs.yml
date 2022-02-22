@@ -1,8 +1,6 @@
 site_name: Guide d'exploitation
 theme:
   name: material
-  # extra_css:
-  #   - stylesheets/extra.css
   features:
     - content.tabs.link
     - content.code.annotate
@@ -10,6 +8,11 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.indexes
+
+# # Page tree
+# pages:
+#   - Home: index.md
+#   - Mkdocs: mkdocs.md
 
 markdown_extensions:
   - admonition
@@ -19,5 +22,17 @@ plugins:
   - awesome-pages
   - render_swagger
   - mermaid2
+
+extra:
+  username: "admin"
+  password: "secret"
+
+# extra_css:
+#   - stylesheets/extra.css
+
+
+# extra_javascript:
+#     - https://unpkg.com/mermaid/dist/mermaid.min.js
+
 
 # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/?h=feed#google-analytics
