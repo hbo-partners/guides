@@ -2,7 +2,9 @@
 
 Ce service permet de gérer les annonceurs. Un annonceur peut etre indifférement un particulier ou un professionnel, l'utilisateur devient annonceur dès lors qu'il décide de publier une annonce. Cela permet de gérer d'une manière unique tous les utlisateurs souhaitant passer une annonce.
 
-**Attention il faut impérativement lié les professionnels quand il s'agit d'une même société.**
+!!! warning "Attention"
+
+    Il faut impérativement lié les professionnels quand il s'agit d'une même société.
 
 
 * Un annonceur est soit un professionnel ou un particulier

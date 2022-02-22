@@ -2,9 +2,12 @@
 
 Ce service permet de laisser des messages à un annonceur. 
 
-**Attention ce n'est pas un dialogue qui est entamé avec un annonceur mais bien une prise de contact.**
+!!! warning "Attention"
 
-* *L'utilisateur connecté laisse un message à destination du concessionnaire responsable de l'annonce*
+    Ce n'est pas un dialogue qui est entamé avec un annonceur mais bien une prise de contact
+
+
+* L'utilisateur connecté laisse un message à destination du concessionnaire responsable de l'annonce
 
 ## Business Rules
 

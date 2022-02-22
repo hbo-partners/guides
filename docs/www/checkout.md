@@ -1,12 +1,12 @@
 # Checkout
 
-Ce service est dédiée au paiement: Choix des articles et parcours paiement.
+Cet espace est dédiée au paiement: Choix des articles et parcours paiement.
 L'ensemble des pages et parcours utilisateur doivent se retrouver dans ce projet.
 
 
-* *Les frontaux ne doivent pas être de type SSR (server side rendering)*
-* *Les frontaux de type CSR (Client Side Rendering) sont sauvés sur des CDN.* 
-* *Les frontaux CSR permet de faire chuter les couts d'infrastructure*
+* Les frontaux ne doivent pas être de type SSR (server side rendering)
+* Les frontaux de type CSR (Client Side Rendering) sont sauvés sur des CDN. 
+* Les frontaux CSR permet de faire chuter les couts d'infrastructure
 
 
 ## Business Rules

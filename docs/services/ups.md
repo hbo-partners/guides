@@ -2,7 +2,10 @@
 
 Ce service est dédiée à la gestion des credits (UPS). Chaque utilisation de crédit ou de multiples de crédits débloque des fonctionnalités pour l'annonceur.
 
-**Attention les crédits nont pas de date d'expiration.**
+!!! warning "Attention"
+
+    Les crédits nont pas de date d'expiration.
+
 
 * Ces crédits sont achetés via le checkout. *Voir le parcours `checkout` pour plus d'informations*. 
 * Les crédits ne permettent pas de publier une annonce mais uniquement à booster une annonce déjà publiée

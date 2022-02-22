@@ -3,7 +3,10 @@
 Ce service fonctionne de concert avec le service Akeneo, il permet depuis les différents frontaux de référencer l'ensemble des attributs utiles pour le moteur de recherche par exemple.
 Cela permet de créer plus facilement des filtres sans avoir a sur sollicité la base de données ES.
 
-**Attention les attributs créer dans le service Akeneo sont doublonnés dans le service attributs.**
+!!! warning "Attention"
+
+    Les attributs créer dans le service Akeneo sont doublonnés dans le service attributs.
+
 
 * Les attributs sont enregistrés sous forme de clé/valeur
 * Le service attributs peut être appelés depuis divers frontaux en mode déconnecté
