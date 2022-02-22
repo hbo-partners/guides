@@ -10,9 +10,9 @@ Le workflow de paiement utilise le service d'encaissement **STRIPE**. Le fonctio
         Workflow
                 
                 up2go          stripe                        up2go
-         ____________  ________________________________   _____________
-        /            \/                                \ /             \
-        -->  Panier  ---> Checkout  ---> Confirmation  ---> A determiner 
+         ____________  ________________________________   _______________
+        /            \/                                \ /               \
+        -->  Panier  ---> Checkout  ---> Confirmation  ---> success/cancel 
             (anonyme)	(identifié)     (identifié)         (identifié)
 
 

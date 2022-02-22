@@ -3,7 +3,8 @@ version: '3.7'
 services:
 
   mkdocs:
-    image: squidfunk/mkdocs-material
+    build: 
+      context: .
     volumes: 
       - ${PWD}:/docs
     ports:

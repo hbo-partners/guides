@@ -24,3 +24,6 @@ log:
 
 bash:
 	$(EXEC_PHP) sh
+
+convert:
+	npm start

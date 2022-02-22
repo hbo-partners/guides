@@ -1,4 +1,4 @@
-# Attributs
+# Attributes
 
 Ce service fonctionne de concert avec le service Akeneo, il permet depuis les différents frontaux de référencer l'ensemble des attributs utiles pour le moteur de recherche par exemple.
 Cela permet de créer plus facilement des filtres sans avoir a sur sollicité la base de données ES.
@@ -34,77 +34,21 @@ Cela permet de créer plus facilement des filtres sans avoir a sur sollicité la
 ### dtd
 
 
-        // 20220217201201
-        // https://raw.githubusercontent.com/hbo-partners/attributes/master/src/dtd/attributes.dtd?token=GHSAT0AAAAAABLH63ONKEUJ5V7S6MMPNADMYQOTY6Q
-        {
-            "$schema": "http://json-schema.org/draft/2019-09/schema#",
-            "type": "object",
-            "definitions": {
-                "company": {
-                    "type": "object",
-                    "properties": {
-                        "siret": {
-                            "type": "string"
-                        },
-                        "type": {
-                            "type": "string"
-                        },
-                        "street": {
-                            "type": "string"
-                        },
-                        "address": {
-                            "$ref": "#/definitions/address"
-                        }
-                    },
-                    "additionalProperties": false
-                },
-                "address": {
-                    "type": "object",
-                    "properties": {
-                        "zipcode": {
-                            "type": "string"
-                        },
-                        "city": {
-                            "type": "string"
-                        },
-                        "street": {
-                            "type": "string"
-                        }
-                    },
-                    "additionalProperties": false
-                }
-            },
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "optional": true
-                },
-                "parent": {
-                    "type": "string"
-                },
-                "name": {
-                    "type": "string"
-                },
-                "phone": {
-                    "type": "string"
-                },
-                "email": {
-                    "type": "email"
-                },
-                "company": {
-                    "$ref": "#/definitions/company"
-                }
-            },
-            "required": [
-                "parent",
-                "name",
-                "phone",
-                "email",
-                "company"
-            ],
-            "additionalProperties": false
-        }
-        
+    {
+        "$schema": "http://json-schema.org/draft/2019-09/schema#",
+
+        "type": "object",
+
+        "properties": {
+            "id": {"type": "string"},
+            "values": {"type": "array"}
+            
+        },
+        "required": ["id", "values"],
+        "additionalProperties": false
+
+    }
+
 ### api
 
-!!swagger swagger.json!!
+!!swagger attributes.yaml!!

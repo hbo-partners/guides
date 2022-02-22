@@ -1,7 +1,14 @@
 nav:
     - checkout.md
+    - stripe.md
     - messages.md
     - attributes.md
     - account.md
     - profiles.md
+    - advertisers.md
     - ups.md
+    - subscriptions.md
+    - publisher.md
+    - invoices.md
+    - users.md
+    - stripe.md

@@ -1,0 +1,2074 @@
+{
+	"info": {
+		"_postman_id": "0c62f4de-aa89-4d67-9e28-6bb9a1c44222",
+		"name": "uptogo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Get user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-auth}}/users/{{cognitoUserId}}",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"users",
+								"{{cognitoUserId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-auth}}/users",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url-auth}}/users/{{cognitoUserId}}",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"users",
+								"{{cognitoUserId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enable user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url-auth}}/users/{{cognitoUserId}}/enable",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"users",
+								"{{cognitoUserId}}",
+								"enable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Disable user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url-auth}}/users/{{cognitoUserId}}/disable",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"users",
+								"{{cognitoUserId}}",
+								"disable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Hicham\",\"email\":\"{{username}}\",\"password\":\"{{password}}\"}"
+						},
+						"url": {
+							"raw": "{{url-auth}}/users",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm signup user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url-auth}}/users/{{cognitoUserId}}/confirm-signup",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"users",
+								"{{cognitoUserId}}",
+								"confirm-signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "advertisers",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"parent\":\"\",\n  \"name\":\"Ford\",\n  \"phone\":\"+330100000000\",\n  \"email\":\"{{username}}\",\n  \"company\": {\n      \"siret\":\"0000000000000\",\n      \"type\":\"Siege\",\n      \"street\":\"sdf sd sdfsdfd\",\n       \"address\":{\n          \"zipcode\":\"75010\",\n          \"city\":\"Paris\",\n          \"street\":\"Rue de paris\"\n        }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/advertisers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"advertisers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"parent\":\"\",\n  \"name\":\"Ford\",\n  \"phone\":\"+330100000000\",\n  \n  \n  \"email\":\"test@local.fr\",\n  \"company\": {\n      \"siret\":\"0000000000000\",\n      \"type\":\"Siege\",\n      \"street\":\"sdf sd sdfsdfd\",\n       \"address\":{\n          \"zipcode\":\"75010\",\n          \"city\":\"Paris\",\n          \"street\":\"Rue de paris\"\n        }\n  }\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/advertisers/a41d2572-7ded-4ccd-935b-50ecbb58f2e3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"advertisers",
+								"a41d2572-7ded-4ccd-935b-50ecbb58f2e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update current",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"parent\":\"\",\n  \"name\":\"Ford\",\n  \"phone\":\"+330100000000\",\n  \n  \n  \"email\":\"test@local.fr\",\n  \"company\": {\n      \"siret\":\"0000000000000\",\n      \"type\":\"Siege\",\n      \"street\":\"sdf sd sdfsdfd\",\n       \"address\":{\n          \"zipcode\":\"75010\",\n          \"city\":\"Paris\",\n          \"street\":\"Rue de paris\"\n        }\n  }\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/advertisers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"advertisers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attach by advertiser id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"advertiser\":\"60081f9ba29c6363eb691c66\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/advertisers/attach/60081f9ba29c6363eb691c68",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"advertisers",
+								"attach",
+								"60081f9ba29c6363eb691c68"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attach current",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"advertiser\":\"60081f9ba29c6363eb691c66\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/advertisers/attach",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"advertisers",
+								"attach"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get current",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/advertisers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"advertisers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/advertisers/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"advertisers",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get current advertiser parents",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/advertisers/parents",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"advertisers",
+								"parents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get advertiser parents by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/advertisers/parents/a41d2572-7ded-4ccd-935b-50ecbb58f2e3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"advertisers",
+								"parents",
+								"a41d2572-7ded-4ccd-935b-50ecbb58f2e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get current advertiser childs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/advertisers/childs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"advertisers",
+								"childs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get advertiser childs by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/advertisers/childs/60081f9ba29c6363eb691c66",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"advertisers",
+								"childs",
+								"60081f9ba29c6363eb691c66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/advertisers/a41d2572-7ded-4ccd-935b-50ecbb58f2e3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"advertisers",
+								"a41d2572-7ded-4ccd-935b-50ecbb58f2e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/advertisers/60081f9ba29c6363eb691c66",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"advertisers",
+								"60081f9ba29c6363eb691c66"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profiles",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":\"71e9443d-d18b-4150-a195-54d5950bd4c0\",\n  \"firstname\":\"Ernie\",\n  \"lastname\":\"Shillam\",\n  \"email\":\"eshillam0@netvibes.com\",\n  \"advertiser\":\"60081f9ba29c6363eb691c66\",\n  \"status\":\"enabled\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/profiles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"profiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstname\":\"Ernie\",\n  \"lastname\":\"Shillam\",\n  \"email\":\"eshillam0@netvibes.com\",\n  \"advertiser\":\"60081f9ba29c6363eb691c66\",\n  \"status\":\"disabled\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/profiles/71e9443d-d18b-4150-a195-54d5950bd4c0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"profiles",
+								"71e9443d-d18b-4150-a195-54d5950bd4c0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update current profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstname\":\"Ernie\",\n  \"lastname\":\"Shillam\",\n  \"email\":\"eshillam0@netvibes.com\",\n  \"advertiser\":\"60081f9ba29c6363eb691c66\",\n  \"status\":\"disabled\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/profiles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"profiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/profiles/71e9443d-d18b-4150-a195-54d5950bd4c0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"profiles",
+								"71e9443d-d18b-4150-a195-54d5950bd4c0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get current profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/profiles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"profiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/profiles/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"profiles",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/profiles/search/eshillam0@netvibes.com",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"profiles",
+								"search",
+								"eshillam0@netvibes.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ups",
+			"item": [
+				{
+					"name": "Dispatch current Advertiser ups",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"advertiser\": \"8383883ab43c82939392\",\n    \"quantity\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ups/dispatch",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ups",
+								"dispatch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get current advertiser ups",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ups",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ups/cc3d6415-b42a-4ba4-b71b-f5e07fb78521",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ups",
+								"cc3d6415-b42a-4ba4-b71b-f5e07fb78521"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"advertiser\": \"8383883ab43c82939391\",\n    \"quantity\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ups",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ups/cc3d6415-b42a-4ba4-b71b-f5e07fb78521",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ups",
+								"cc3d6415-b42a-4ba4-b71b-f5e07fb78521"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ups/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ups",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"344ec6a6-0bb5-4c2e-96f5-31146afc1621\",\n    \"advertiser\": \"8383883ab43c82939391\",\n    \"quantity\": 60\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ups/344ec6a6-0bb5-4c2e-96f5-31146afc1621",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ups",
+								"344ec6a6-0bb5-4c2e-96f5-31146afc1621"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dispatch ups by AdvertiserId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"advertiser\": \"8383883ab43c82939391\",\n    \"quantity\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ups/dispatch/8383883ab43c82939392",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ups",
+								"dispatch",
+								"8383883ab43c82939392"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subscriptions",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"344ec6a6-0bb5-4c2e-96f5-31146afc1621\",\n    \"advertiser\": \"8383883ab43c82939391\",\n    \"quantity\": 50,\n    \"status\": \"enabled\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/subscriptions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"advertiser\": \"8383883ab43c82939398\",\n    \"quantity\": 50200,\n    \"status\": \"enabled\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/subscriptions/sub_1JwRbT2VYug39SBz6yJfE4PP",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subscriptions",
+								"sub_1JwRbT2VYug39SBz6yJfE4PP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get current advertiser subscription",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/subscriptions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/subscriptions/sub_1JwRbT2VYugoKSBz6yJfr39Y",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subscriptions",
+								"sub_1JwRbT2VYugoKSBz6yJfr39Y"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/subscriptions/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subscriptions",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "attributes",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"attribute1\",\n    \"values\": [\"value1\", \"value2\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/attributes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"attributes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"attribute1\",\n    \"values\": [\"value1\", \"value3\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/attributes/attribute1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"attributes",
+								"attribute1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/attributes/color",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"attributes",
+								"color"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/attributes/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"attributes",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/attributes/attribute1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"attributes",
+								"attribute1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "acl",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"admin\",\n    \"scopes\": [\n        {\"method\":\"PATCH\", \"resource\":\"/ups/dispatch/{advertiserId}\"},\n        {\"method\":\"GET\", \"resource\":\"/ups\"},\n        {\"method\":\"POST\", \"resource\":\"/publisher/boost\"},\n        {\"method\":\"POST\", \"resource\":\"/publisher/publish\"}\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/acl",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"acl"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"user\",\n    \"scopes\": [\n        {\"method\":\"PATCH\", \"resource\":\"/ups/dispatch/*\"},\n        {\"method\":\"GET\", \"resource\":\"/ups\"},\n        {\"method\":\"POST\", \"resource\":\"/publisher/boost\"},\n        {\"method\":\"POST\", \"resource\":\"/publisher/publish\"}\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/acl/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"acl",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/acl/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"acl",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/acl/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"acl",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/acl/attribute1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"acl",
+								"attribute1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "invoices",
+			"item": [
+				{
+					"name": "Get by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/invoices/sub_1JwRb90VYugoKSBz6yJfE4KS",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"invoices",
+								"sub_1JwRb90VYugoKSBz6yJfE4KS"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by subscription id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/invoices/subscription/sub_1KJdp0GcXX7p0Z55DCUJrmUA",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"invoices",
+								"subscription",
+								"sub_1KJdp0GcXX7p0Z55DCUJrmUA"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/invoices/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"invoices",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "publisher",
+			"item": [
+				{
+					"name": "boost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"boost_type\": \"video\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/publisher/boost",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"publisher",
+								"boost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "publish",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"products\": [1,2,3],\n    \"products_published\": 60\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/publisher/publish",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"publisher",
+								"publish"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "Forgot password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"{{username}}\"}"
+						},
+						"url": {
+							"raw": "{{url-auth}}/password/forgot",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"password",
+								"forgot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm forgot password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"{{username}}\", \"password\": \"{{password}}\", \"code\": \"649710\"}"
+						},
+						"url": {
+							"raw": "{{url-auth}}/password/forgot/confirm",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"password",
+								"forgot",
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm Sign up",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"{{username}}\", \"code\": \"007943\"}"
+						},
+						"url": {
+							"raw": "{{url-auth}}/signup/confirm",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"signup",
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign up",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Hicham\",\"email\":\"{{username}}\",\"password\":\"{{password}}\"}"
+						},
+						"url": {
+							"raw": "{{url-auth}}/signup",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.idToken);",
+									"postman.setEnvironmentVariable(\"refreshToken\", jsonData.refreshToken);",
+									"postman.setEnvironmentVariable(\"accessToken\", jsonData.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"{{username}}\",\"password\":\"{{password}}\"}"
+						},
+						"url": {
+							"raw": "{{url-auth}}/login",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-auth}}/token/{{token}}",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"token",
+								"{{token}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.idToken);",
+									"postman.setEnvironmentVariable(\"accessToken\", jsonData.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"refreshToken\":\"{{refreshToken}}\"}"
+						},
+						"url": {
+							"raw": "{{url-auth}}/token/refresh",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"token",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accessToken\":\"{{token}}\",\n    \"password\":\"{{password}}\",\n    \"newpassword\": \"{{password}}\"\n}"
+						},
+						"url": {
+							"raw": "{{url-auth}}/password/change",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"password",
+								"change"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cognito",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.accessToken);",
+									"postman.setEnvironmentVariable(\"refreshToken\", jsonData.refreshToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"{{username}}\",\"password\":\"{{password}}\"}"
+						},
+						"url": {
+							"raw": "{{url-auth}}/login",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"cognitoUserId\", jsonData.username);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-auth}}/token/{{token}}",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"token",
+								"{{token}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.accessToken);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"refreshToken\":\"{{refreshToken}}\"}"
+						},
+						"url": {
+							"raw": "{{url-auth}}/token/refresh",
+							"host": [
+								"{{url-auth}}"
+							],
+							"path": [
+								"token",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

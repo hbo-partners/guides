@@ -18,5 +18,35 @@ https://pythonrepo.com/repo/lukasgeiter-mkdocs-awesome-pages-plugin-python-docum
 // Convert Postma to Swagger online
 https://metamug.com/util/postman-to-swagger/
 
+// If not works the project will be found here:
+https://github.com/tecfu/postman-to-swagger
+
+install: `npm install tecfu/postman-to-swagger`
+
+        const p2s = require('postman-to-swagger')
+        const yaml = require('js-yaml')
+        const fs = require('fs')
+        const postmanJson = require('./postman_collection.json')
+        const swaggerJson = p2s(postmanJson, {
+        target_spec: "swagger2.0",
+        info: {
+            version: 'v1'
+        }
+        })
+
+        //let output = JSON.stringify(swaggerJson, null, 2)
+        let output = yaml.safeDump(swaggerJson)
+
+        // Save to file
+        fs.writeFileSync(
+        'swagger.yaml',
+        output,
+        'utf8'
+        )
+
+
 // Download Swagger yaml to json
 https://editor.swagger.io/
+
+// Search pip plugin
+https://pypi.org/search/?q=mkdocs-mermaid2-plugin&o=

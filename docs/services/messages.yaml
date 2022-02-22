@@ -1,0 +1,33 @@
+swagger: '2.0'
+info:
+  title: messages
+  description: Ce service permet la récupération des factures enregistrées sur Stripe à partir d'un abonnement ou d'un achat de credits.
+  version: v1
+schemes:
+  - https
+paths:
+
+  /invoices/sub_1JwRb90VYugoKSBz6yJfE4KS:
+    get:
+      summary: Get by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /invoices/subscription/sub_1KJdp0GcXX7p0Z55DCUJrmUA:
+    get:
+      summary: Get by subscription id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /invoices/list:
+    get:
+      summary: List
+      parameters: []
+      responses:
+        '200':
+          description: OK
+

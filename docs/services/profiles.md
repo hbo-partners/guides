@@ -25,12 +25,6 @@ Ce service permet de gérer les profils des utlisateurs, profils particuliers ou
 |`PROF_3` | Le professionnel peut créer un profile avec des attributs supplémentaires                           |
 |`PROF_4` | La validation d'un compte professionnel se fait manuellement                                        |
 
-|`PROFIL_1` | Création d'un menu Profil (backoffice client) que ce soit pour les utilisateurs particuliers ou les utilisateurs professionnels                   |
-|`PROFIL_2` | Saisie et modification par les utilisateurs des champs textes pour les profils particuliers                                                       |
-|`PROFIL_3` | Saisie et modification par les utilisateurs des champs textes pour les profils professionnels avec des champs supplémentaires aux particuliers.   |
-|`PROFIL_4` | Les profesionnels peuvent indiquer s'il appartient à un groupe automobile, créer des accès pour leurs équipes avec des roles et permissions       |
-|`PROFIL_5` | Possibilité pour l'équipe d'uptogo d'acceder et modifier si besoin les profils des membres                                                        |
-
 
 ## Technical Rules
 
@@ -80,4 +74,4 @@ Ce service permet de gérer les profils des utlisateurs, profils particuliers ou
 
 ### api
 
-!!swagger swagger.json!!
+!!swagger profiles.yaml!!

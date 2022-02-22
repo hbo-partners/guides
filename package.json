@@ -1,0 +1,28 @@
+{
+  "name": "postman2swagger",
+  "version": "1.0.0",
+  "description": "Convert Postman 2 Swagger OpenAPi",
+  "main": "postman2swagger.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node convert.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hbo-partners/guides.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hbo-partners/guides/issues"
+  },
+  "homepage": "https://github.com/hbo-partners/guides#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "js-yaml": "^4.1.0",
+    "postman-to-swagger": "github:tecfu/postman-to-swagger"
+  }
+}

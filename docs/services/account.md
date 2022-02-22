@@ -24,5 +24,9 @@ Ce service est entièrement géré par Cognito AWS (IDP) et permet la création 
 |`LOG_IN_2` | Connexion avec les réseaux sociaux Facebook et Google             |
 |`LOG_IN_3` | Inscription en 2 étapes (2 slides)                                |
 |`LOG_IN_4` | Inscription via les réseaux sociaux facebook et Google            |
-|`LOG_IN_5`	| Informations différentes entre un particulier et un professionnel.|
 
+## Technical Rules
+
+### api
+
+!!swagger account.yaml!!
