@@ -1,18 +1,21 @@
 # Advertisers
 
-Ce service permet de gérer les annonceurs. Un annonceur peut etre indifférement un particulier ou un professionnel, l'utilisateur devient annonceur dès lors qu'il décide de publier une annonce. Cela permet de gérer d'une manière unique tous les utlisateurs souhaitant passer une annonce.
+Ce service permet de gérer les annonceurs.<br/>
+Un annonceur peut etre indifférement un particulier ou un professionnel.<br/>
+Un utilisateur devient annonceur dès lors qu'il décide de publier une annonce. Cela permet de gérer d'une manière unique tous les utlisateurs souhaitant passer une annonce.
+
 
 !!! warning "Attention"
 
     Il faut impérativement lié les professionnels quand il s'agit d'une même société.
 
 
-* Un annonceur est soit un professionnel ou un particulier
-* Un annonceur unique (PART/PRO) permet de conserver le workflow d'abonnement ou crédits
-* Un annonceur particulier peut ainsi bénéficier de formule gratuite
-* La différencation particulier/professionnel se fait avec les informations liés à la compagnie du pro
-* Cette unicité PART/PRO permet de ne pas doubler les services crédits & abonnements et ainsi simplifier la compréhension
-
+* Un annonceur est soit un professionnel ou un particulier.
+* Un annonceur unique (PART/PRO) permet de conserver le workflow d'abonnement ou crédits.
+* Un annonceur particulier peut ainsi bénéficier de formule gratuite.
+* La différence entre un  particulier et un professionnel réside dans la saisie des informations liès à l'entreprise dans le champ "company".
+* Cette unicité PART/PRO permet de ne pas doubler les services crédits & abonnements et ainsi simplifier la compréhension.
+* Les annonceurs sont organisés sous forme d'arbre AVL, c'est à dire qu'ils peuvent être parcourus avec leurs ancestors.
 
 ## Business Rules
 

@@ -1,21 +1,16 @@
-# Welcome to MkDocs
+# Guide d'exploitation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Le document représente la documentation de l'ensemble des services développés pour le projet Uptogo.
 
-## Commands
+## Services
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-!!swagger swagger.json!!
-!!swagger-http https://raw.githubusercontent.com/akeneo/pim-api-docs/master/content/swagger/akeneo-web-api.json!!
-
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+* `Account`: pour la gestion du compte d'identification.
+* `Profiles`: pour la gestion des profils utilisateurs
+* `Authentication`: pour la gestion de l'authentification
+* `Messages`: pour la gestion des messages entre utilisateurs
+* `Ups`: pour la gestion des ups
+* `Subscriptions`: pour la gestion des abonnements
+* `Invoices`: pour la gestion des factures
+* `Advertisers`: pour la gestion des profils annonceurs
+* `Publisher`: pour la gestion des actions sur les annonces Akeneo
+* `...`

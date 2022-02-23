@@ -1,12 +1,12 @@
 # Subscriptions
 
-Ce service est dédiée à la gestion des abonnements. Les fomules liés aux abonnements correspondent
+Ce service est dédiée à la gestion des abonnements.
 
 
 
 !!! danger "Attention"    
     
-    Chacun des prix associés à une souscription doivent obligatoirement être flaggués avec la mention `quantity` dans Stripe.
+    Chacun des prix associés à une souscription doit obligatoirement être flaggués avec la mention `quantity` dans Stripe.
 
         {
             "id": "price_1KVZkS2eZvKYlo2CKv9tTeBp",
@@ -17,7 +17,8 @@ Ce service est dédiée à la gestion des abonnements. Les fomules liés aux abo
             ...
         }
 
-* Ces abonnements sont achetés via le checkout. *Voir le parcours `checkout` pour plus d'informations*. 
+* Ces abonnements sont achetés via le checkout avec le mode "subscription". *Voir le parcours `checkout` pour plus d'informations*. 
+* La créatin des abonnements se fait automatiquement via les événements `STRIPE`.
 * Les abonnements sont expirables avec une date anniversaire qui doit être fixée dans *Stripe*
 * Les abonnements permettent de publier une annonce mais ne permette pas de booster une annonce déjà publiée
 

@@ -1,6 +1,6 @@
 # Publisher
 
-Ce service autorise ou refuse la publication d'une annonce. Cet autorisation dépend de la formule associée au compte de l'utilisateur.
+Ce service permet d'autoriser ou refuser la publication d'une annonce. Cet autorisation dépend de la formule associée au compte de l'utilisateur.
 
 * Dans le parcours utilisateur, ce service ne peut être appelé que si il existe une formule associé au compte
 * Fonctionne pour un particulier ou un professionnel si il bénéficie d'une formule.

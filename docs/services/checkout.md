@@ -48,17 +48,17 @@ sequenceDiagram
 
 Tous les champs suivants sont **obligatoires**. Ils doivent être envoyés au microservice. Cela demarre une session qui permet aux clients de payer leurs souscription ou d'acheter des UPS
 
-| id                | Description                                                               |
-|:------------------|:--------------------------------------------------------------------------|
-|`form_url`         | A poster vers le microservice, permet d'obternir le checkout session      |
-|`mode`             | Mode de paiement plusieurs valeurs sont possibles voir doc stripe         |
-|`priceId`          | Un produit comporte plusieurs prix, préciser ici le prix attendu          |
-|`customerStripeId` | Réference stripe du client                                                |
-|`customerEmail`    | Email du client, permet d'associer ce client au retour *Stripe*           |
-|`advertiserId`     | Id de l'annonceur, permet d'associer cet annonceur au retour *Stripe*     |
-|`profileId`        | Id profile de l'acheteur, permet d'associer ce profile au retour *Stripe* |
-|`successUrl`       | Url de redirection en cas de succès                                       |
-|`cancelUrl`        | Url de redirection en cas d'annulation/echec                              |
+| id                 | Description                                                               |
+|:-------------------|:--------------------------------------------------------------------------|
+|`form_url`          | A poster vers le microservice, permet d'obternir le checkout session.                                                                     |
+|`mode`              | Mode de paiement plusieurs valeurs sont possibles voir doc stripe.                                                                        |
+|`priceId`           | Un produit comporte plusieurs prix, préciser ici l'identifiant du prix attendu.                                                           |
+|`customerStripeId`  | Réference stripe du client. Cette référence se trouve dans la table profiles s'il a déjà effectué un paiement.                                       |
+|`customerEmail`     | Email du client, permet d'associer ce client au retour *Stripe*. Il doit être le même que celui qui sert d'identifiant d'authentification.|
+|`advertiserId`      | Id de l'annonceur, permet d'associer cet annonceur au retour *Stripe*.                                                                    |
+|`profileId`         | Id profile de l'acheteur, permet d'associer ce profile au retour *Stripe*.                                                                |
+|`successUrl`        | Url de redirection en cas de succès.                                                                                                      |
+|`cancelUrl`         | Url de redirection en cas d'annulation/echec.                                                                                             |
 
 
 

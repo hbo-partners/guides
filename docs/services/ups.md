@@ -5,7 +5,7 @@ Ce service est dédiée à la gestion des credits (UPS). Chaque utilisation de c
 
 !!! danger "Attention"    
     
-    Chacun des prix associés à un produits(crédits) doivent obligatoirement être flaggués avec la mention `quantity` dans Stripe.
+    Chacun des prix associés à un produits(crédits) doit obligatoirement être flaggués avec la mention `quantity` dans Stripe.
 
         {
             "id": "price_1KVZkS2eZvKYlo2CKv9tTeBp",
@@ -19,11 +19,11 @@ Ce service est dédiée à la gestion des credits (UPS). Chaque utilisation de c
     
 !!! warning "Attention"
 
-    Les crédits nont pas de date d'expiration.
+    Les crédits n'ont pas de date d'expiration.
 
 
-
-* Ces crédits sont achetés via le checkout. *Voir le parcours `checkout` pour plus d'informations*. 
+* Ces crédits sont achetés via le checkout avec le mode "payment". *Voir le parcours `checkout` pour plus d'informations*. 
+* La créatin des ups se fait automatiquement via les événements `STRIPE`.
 * Les crédits ne permettent pas de publier une annonce mais uniquement à booster une annonce déjà publiée
 * Les crédits ne sont pas expirables.
 * L'augmentation du prix des crédits peut se faire uniquement sur les nouveaux UPS émis.

@@ -1,6 +1,6 @@
 # Account
 
-Ce service est entièrement géré par Cognito AWS (IDP) et permet la création de compte, mot de passe oublié, mise à jour d'un profile, ... 
+Ce service est entièrement géré par Cognito AWS (IDP) et permet la création de compte, mot de passe oublié, mise à jour d'un compte utilisateur, ... 
 
 
 * Ce service est le premier des services Account, Profiles composant le parcours de création d'un compte

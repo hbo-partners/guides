@@ -1,10 +1,8 @@
 # Profiles
 
-Ce service permet de gérer les profils des utlisateurs, profils particuliers ou professionnels. 
+Ce service permet de gérer les profils des utlisateurs particuliers ou professionnels. <br/>
+Le profile est crée de manière automatique après chaque confirmation d'une inscription d'un utilisateur sur le service IDP (fournisseur d'identité).
 
-
-* Ce service arrive après la création de l'account sur le service fournisseur d'identité. (IDP)
-* Les profils sont organisés sous forme d'arbre AVL, c'est à dire que les profiles peuvent être parcourus avec leurs ancestors.
 
 ## Business Rules
 
