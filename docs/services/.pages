@@ -1,7 +1,7 @@
 nav:
     - checkout.md
     - stripe.md
-    - messages.md
+    # - messages.md
     - attributes.md
     - account.md
     - profiles.md
