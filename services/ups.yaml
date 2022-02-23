@@ -1,0 +1,112 @@
+swagger: '2.0'
+info:
+  title: UPS
+  description: No description
+  version: v1
+schemes:
+  - https
+paths:
+
+  /ups/dispatch:
+    patch:
+      summary: Dispatch current Advertiser ups
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              advertiser:
+                type: string
+              quantity:
+                type: number
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /ups:
+    get:
+      summary: Get current advertiser ups
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+    post:
+      summary: Create
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              advertiser:
+                type: string
+              quantity:
+                type: number
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /ups/cc3d6415-b42a-4ba4-b71b-f5e07fb78521:
+    get:
+      summary: Get by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+    delete:
+      summary: Delete by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /ups/list:
+    get:
+      summary: List
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /ups/344ec6a6-0bb5-4c2e-96f5-31146afc1621:
+    patch:
+      summary: Update by id
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              advertiser:
+                type: string
+              quantity:
+                type: number
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /ups/dispatch/8383883ab43c82939392:
+    patch:
+      summary: Dispatch ups by AdvertiserId
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              advertiser:
+                type: string
+              quantity:
+                type: number
+          required: true
+      responses:
+        '200':
+          description: OK

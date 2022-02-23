@@ -1,0 +1,74 @@
+swagger: '2.0'
+info:
+  title: UPS
+  description: No description
+  version: v1
+schemes:
+  - https
+paths:
+
+  /subscriptions:
+    post:
+      summary: create
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              advertiser:
+                type: string
+              quantity:
+                type: number
+              status:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    get:
+      summary: Get current advertiser subscription
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /subscriptions/sub_1JwRbT2VYug39SBz6yJfE4PP:
+    patch:
+      summary: Update by id
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              advertiser:
+                type: string
+              quantity:
+                type: number
+              status:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /subscriptions/sub_1JwRbT2VYugoKSBz6yJfr39Y:
+    get:
+      summary: Get by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /subscriptions/list:
+    get:
+      summary: List
+      parameters: []
+      responses:
+        '200':
+          description: OK
+

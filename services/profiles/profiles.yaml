@@ -1,0 +1,112 @@
+swagger: '2.0'
+info:
+  title: profiles
+  description: No description
+  version: v1
+schemes:
+  - https
+paths:
+
+  /profiles:
+    post:
+      summary: create
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              firstname:
+                type: string
+              lastname:
+                type: string
+              email:
+                type: string
+              advertiser:
+                type: string
+              status:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    patch:
+      summary: Update current profile
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              firstname:
+                type: string
+              lastname:
+                type: string
+              email:
+                type: string
+              advertiser:
+                type: string
+              status:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    get:
+      summary: Get current profile
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /profiles/71e9443d-d18b-4150-a195-54d5950bd4c0:
+    patch:
+      summary: Update by id
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              firstname:
+                type: string
+              lastname:
+                type: string
+              email:
+                type: string
+              advertiser:
+                type: string
+              status:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    get:
+      summary: Get by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /profiles/list:
+    get:
+      summary: list
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /profiles/search/eshillam0@netvibes.com:
+    get:
+      summary: search
+      parameters: []
+      responses:
+        '200':
+          description: OK
+

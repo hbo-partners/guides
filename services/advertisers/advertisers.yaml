@@ -1,0 +1,220 @@
+swagger: '2.0'
+info:
+  title: advertisers
+  description: No description
+  version: v1
+schemes:
+  - https
+paths:
+  /advertisers:
+    post:
+      summary: Create
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              parent:
+                type: string
+              name:
+                type: string
+              phone:
+                type: string
+              email:
+                type: string
+              company:
+                type: object
+                properties:
+                  siret:
+                    type: string
+                  type:
+                    type: string
+                  street:
+                    type: string
+                  address:
+                    type: object
+                    properties:
+                      zipcode:
+                        type: string
+                      city:
+                        type: string
+                      street:
+                        type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+      
+    patch:
+      summary: Update current
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              parent:
+                type: string
+              name:
+                type: string
+              phone:
+                type: string
+              email:
+                type: string
+              company:
+                type: object
+                properties:
+                  siret:
+                    type: string
+                  type:
+                    type: string
+                  street:
+                    type: string
+                  address:
+                    type: object
+                    properties:
+                      zipcode:
+                        type: string
+                      city:
+                        type: string
+                      street:
+                        type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+      
+    get:
+      summary: Get current
+      parameters: []
+      responses:
+        '200':
+          description: OK
+      
+  /advertisers/a41d2572-7ded-4ccd-935b-50ecbb58f2e3:
+    patch:
+      summary: Update by id
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              parent:
+                type: string
+              name:
+                type: string
+              phone:
+                type: string
+              email:
+                type: string
+              company:
+                type: object
+                properties:
+                  siret:
+                    type: string
+                  type:
+                    type: string
+                  street:
+                    type: string
+                  address:
+                    type: object
+                    properties:
+                      zipcode:
+                        type: string
+                      city:
+                        type: string
+                      street:
+                        type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+      
+    get:
+      summary: Get by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+      
+  /advertisers/attach/60081f9ba29c6363eb691c68:
+    patch:
+      summary: Attach by advertiser id
+      parameters:
+        - in: body
+          name: advertiser
+          schema:
+            type: object
+            properties:
+              advertiser:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+      
+  /advertisers/attach:
+    patch:
+      summary: Attach current
+      parameters:
+        - in: body
+          name: advertiser
+          schema:
+            type: object
+            properties:
+              advertiser:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+      
+  /advertisers/list:
+    get:
+      summary: List all
+      parameters: []
+      responses:
+        '200':
+          description: OK
+      
+  /advertisers/parents:
+    get:
+      summary: Get current advertiser parents
+      parameters: []
+      responses:
+        '200':
+          description: OK
+      
+  /advertisers/parents/a41d2572-7ded-4ccd-935b-50ecbb58f2e3:
+    get:
+      summary: Get advertiser parents by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+      
+  /advertisers/childs:
+    get:
+      summary: Get current advertiser childs
+      parameters: []
+      responses:
+        '200':
+          description: OK
+      
+  /advertisers/childs/60081f9ba29c6363eb691c66:
+    get:
+      summary: Get advertiser childs by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+      
+  /advertisers/60081f9ba29c6363eb691c66:
+    delete:
+      summary: Delete by id
+      parameters: []
+      responses:
+        '200':
+          description: OK

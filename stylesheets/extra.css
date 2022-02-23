@@ -1,0 +1,8 @@
+:root {
+    --md-text-font: "Roboto mono"; 
+    font-size: 12px;
+}
+
+.md-typeset {
+    font-size: px2rem(12px);
+}

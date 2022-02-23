@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.2.3, mkdocs-material-8.2.1" name="generator"/>
+<title>Installation en local - Guide d'exploitation</title>
+<link href="../../assets/stylesheets/main.e8d9bf0c.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="none" data-md-color-primary="none" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#installation-en-local">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Guide d'exploitation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Guide d'exploitation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Guide d'exploitation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Installation en local
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Guide d'exploitation
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../overview/">
+        Akeneo
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../services/checkout/">
+        Services
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../www/home/">
+        Www
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Guide d'exploitation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Guide d'exploitation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+    Guide d'exploitation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Guide d'exploitation
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          Akeneo
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Akeneo" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Akeneo
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../overview/">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Installation en local
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Installation en local
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#docker-compose">
+    docker-compose
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/">
+        Api
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+          Services
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Services" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Services
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../services/checkout/">
+        Checkout
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../services/stripe/">
+        Stripe
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../services/attributes/">
+        Attributes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../services/account/">
+        Account
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../services/profiles/">
+        Profiles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../services/advertisers/">
+        Advertisers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../services/ups/">
+        UPS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../services/subscriptions/">
+        Subscriptions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../services/publisher/">
+        Publisher
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../services/invoices/">
+        Invoices
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../services/users/">
+        Administration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../services/stripe/">
+        Stripe
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+          Www
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Www" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Www
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../www/home/">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../www/catalog/">
+        Catalogue
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../www/auth/">
+        Authentification
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../www/account/">
+        Account
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../www/checkout/">
+        Checkout
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../www/landing/">
+        Landing pages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../www/admin/">
+        Admin
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#docker-compose">
+    docker-compose
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="installation-en-local">Installation en local</h1>
+<ul>
+<li>La documentation pour l'installation en local est disponible à cette adresse: https://github.com/akeneo/pim-community-dev</li>
+</ul>
+<h3 id="docker-compose">docker-compose</h3>
+<pre><code>version: '3.7'
+
+services:
+php:
+    image: 'akeneo/pim-php-dev:6.0'
+    environment:
+    APP_ENV: '${APP_ENV:-prod}'
+    COMPOSER_HOME: '/var/www/.composer'
+    PHP_IDE_CONFIG: 'serverName=pim-docker-cli'
+    XDEBUG_MODE: '${XDEBUG_MODE:-off}'
+    XDEBUG_CONFIG: 'client_host=172.17.0.1'
+    BLACKFIRE_CLIENT_ID: '${BLACKFIRE_CLIENT_ID:-client_id}'
+    BLACKFIRE_CLIENT_TOKEN: '${BLACKFIRE_CLIENT_TOKEN:-client_token}'
+    volumes:
+    - './:/srv/pim'
+    - '${HOST_COMPOSER_HOME:-~/.composer}:/var/www/.composer'
+    working_dir: '/srv/pim'
+    command: 'php'
+    init: true
+    networks:
+    - 'pim'
+
+fpm:
+    image: 'akeneo/pim-php-dev:6.0'
+    environment:
+    APP_ENV: '${APP_ENV:-prod}'
+    BEHAT_TMPDIR: '/srv/pim/var/cache/tmp'
+    BEHAT_SCREENSHOT_PATH: '/srv/pim/var/tests/screenshots'
+    PHP_IDE_CONFIG: 'serverName=pim-docker-web'
+    XDEBUG_MODE: '${XDEBUG_MODE:-off}'
+    XDEBUG_CONFIG: 'client_host=172.17.0.1'
+    BLACKFIRE_CLIENT_ID: '${BLACKFIRE_CLIENT_ID:-client_id}'
+    BLACKFIRE_CLIENT_TOKEN: '${BLACKFIRE_CLIENT_TOKEN:-client_token}'
+    volumes:
+    - './:/srv/pim'
+    working_dir: '/srv/pim'
+    command: 'php-fpm -F'
+    networks:
+    - 'pim'
+
+node:
+    image: 'akeneo/node:12'
+    environment:
+    YARN_CACHE_FOLDER: '/home/node/.yarn'
+    CYPRESS_CACHE_FOLDER: '/home/node/.cypress'
+    volumes:
+    - './:/srv/pim'
+    - '${HOST_YARN_CACHE_FOLDER:-~/.cache/yarn}:/home/node/.yarn'
+    - '${HOST_CYPRESS_CACHE_FOLDER:-~/.cache/Cypress}:/home/node/.cypress'
+    working_dir: '/srv/pim'
+    networks:
+    - 'pim'
+
+selenium:
+    image: 'selenium/standalone-chrome-debug:3.141.59'
+    volumes:
+    - './:/srv/pim:ro'
+    - '/dev/shm:/dev/shm'
+    ports:
+    - '${DOCKER_PORT_SELENIUM:-5910}:5900'
+    networks:
+    - 'pim'
+
+httpd:
+    image: 'httpd:2.4'
+    environment:
+    APP_ENV: '${APP_ENV:-prod}'
+    depends_on:
+    - 'fpm'
+    ports:
+    - '${DOCKER_PORT_HTTP:-8080}:80'
+    volumes:
+    - './:/srv/pim:ro'
+    - './docker/httpd.conf:/usr/local/apache2/conf/httpd.conf:ro'
+    - './docker/akeneo.conf:/usr/local/apache2/conf/vhost.conf:ro'
+    networks:
+    - 'pim'
+
+mysql:
+    image: 'mysql:8.0.22'
+    command: '--default-authentication-plugin=mysql_native_password'
+    environment:
+    MYSQL_ROOT_PASSWORD: 'root'
+    MYSQL_USER: '${APP_DATABASE_USER}'
+    MYSQL_DATABASE: '${APP_DATABASE_NAME}'
+    MYSQL_PASSWORD: '${APP_DATABASE_PASSWORD}'
+    volumes:
+    - './docker/initdb.d:/docker-entrypoint-initdb.d:ro'
+    ports:
+    - '${DOCKER_PORT_MYSQL:-33006}:3306'
+    networks:
+    - 'pim'
+
+elasticsearch:
+    image: 'docker.elastic.co/elasticsearch/elasticsearch-oss:7.10.1'
+    environment:
+    ES_JAVA_OPTS: '${ES_JAVA_OPTS:--Xms512m -Xmx512m}'
+    discovery.type: 'single-node'
+    ports:
+    - '${DOCKER_PORT_ELASTICSEARCH:-9210}:9200'
+    networks:
+    - 'pim'
+
+object-storage:
+    image: 'minio/minio:RELEASE.2021-09-15T04-54-25Z'
+    entrypoint: '/bin/sh -c "mkdir -p /data/archive /data/catalog /data/jobs &amp;&amp; minio server /data"'
+    environment:
+    MINIO_ACCESS_KEY: 'AKENEO_OBJECT_STORAGE_ACCESS_KEY'
+    MINIO_SECRET_KEY: 'AKENEO_OBJECT_STORAGE_SECRET_KEY'
+    ports:
+    - '${DOCKER_PORT_OBJECT_STORAGE:-9090}:9000'
+    networks:
+    - 'pim'
+
+blackfire:
+    image: 'blackfire/blackfire:2'
+    environment:
+    BLACKFIRE_SERVER_ID: '${BLACKFIRE_SERVER_ID:-server_id}'
+    BLACKFIRE_SERVER_TOKEN: '${BLACKFIRE_SERVER_TOKEN:-server_token}'
+    networks:
+    - 'pim'
+
+pubsub-emulator:
+    image: 'google/cloud-sdk:331.0.0'
+    command: 'gcloud --user-output-enabled --log-http beta emulators pubsub start --host-port=0.0.0.0:8085'
+    networks:
+    - 'pim'
+
+networks:
+pim:
+</code></pre>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+            Back to top
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Introduction" class="md-footer__link md-footer__link--prev" href="../overview/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Introduction
+            </div>
+</div>
+</a>
+<a aria-label="Next: Api" class="md-footer__link md-footer__link--next" href="../api/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Api
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.annotate", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+<script src="../../assets/javascripts/bundle.8aa65030.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+swagger: '2.0'
+info:
+  title: publisher
+  description: Ce service est dédiée à la gestion des credits (UPS). Chaque utilisation de crédit ou de mumtiples de crédits débloque des fonctionnalités pour l'annonceur.
+  version: v1
+schemes:
+  - https
+paths:
+
+  /publisher/boost:
+    post:
+      summary: boost
+      parameters:
+        - in: body
+          name: boost_type
+          schema:
+            type: object
+            properties:
+              boost_type:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /publisher/publish:
+    post:
+      summary: publish
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              products:
+                type: array
+                items:
+                  type: number
+              products_published:
+                type: number
+          required: true
+      responses:
+        '200':
+          description: OK
+

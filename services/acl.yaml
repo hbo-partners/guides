@@ -1,0 +1,907 @@
+swagger: '2.0'
+info:
+  title: UPS
+  description: No description
+  version: v1
+schemes:
+  - https
+paths:
+  /users/{cognitoUserId}:
+    get:
+      summary: Get user
+      parameters:
+        - in: path
+          name: cognitoUserId
+          type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    delete:
+      summary: Delete user
+      parameters:
+        - in: path
+          name: cognitoUserId
+          type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /users:
+    get:
+      summary: Get users
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+    post:
+      summary: Create user
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              email:
+                type: string
+              password:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /users/{cognitoUserId}/enable:
+    get:
+      summary: Enable user
+      parameters:
+        - in: path
+          name: cognitoUserId
+          type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /users/{cognitoUserId}/disable:
+    get:
+      summary: Disable user
+      parameters:
+        - in: path
+          name: cognitoUserId
+          type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /users/{cognitoUserId}/confirm-signup:
+    post:
+      summary: Confirm signup user
+      parameters:
+        - in: path
+          name: cognitoUserId
+          type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /advertisers:
+    post:
+      summary: Create
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              parent:
+                type: string
+              name:
+                type: string
+              phone:
+                type: string
+              email:
+                type: string
+              company:
+                type: object
+                properties:
+                  siret:
+                    type: string
+                  type:
+                    type: string
+                  street:
+                    type: string
+                  address:
+                    type: object
+                    properties:
+                      zipcode:
+                        type: string
+                      city:
+                        type: string
+                      street:
+                        type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    patch:
+      summary: Update current
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              parent:
+                type: string
+              name:
+                type: string
+              phone:
+                type: string
+              email:
+                type: string
+              company:
+                type: object
+                properties:
+                  siret:
+                    type: string
+                  type:
+                    type: string
+                  street:
+                    type: string
+                  address:
+                    type: object
+                    properties:
+                      zipcode:
+                        type: string
+                      city:
+                        type: string
+                      street:
+                        type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    get:
+      summary: Get current
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /advertisers/a41d2572-7ded-4ccd-935b-50ecbb58f2e3:
+    patch:
+      summary: Update by id
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              parent:
+                type: string
+              name:
+                type: string
+              phone:
+                type: string
+              email:
+                type: string
+              company:
+                type: object
+                properties:
+                  siret:
+                    type: string
+                  type:
+                    type: string
+                  street:
+                    type: string
+                  address:
+                    type: object
+                    properties:
+                      zipcode:
+                        type: string
+                      city:
+                        type: string
+                      street:
+                        type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    get:
+      summary: Get by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /advertisers/attach/60081f9ba29c6363eb691c68:
+    patch:
+      summary: Attach by advertiser id
+      parameters:
+        - in: body
+          name: advertiser
+          schema:
+            type: object
+            properties:
+              advertiser:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /advertisers/attach:
+    patch:
+      summary: Attach current
+      parameters:
+        - in: body
+          name: advertiser
+          schema:
+            type: object
+            properties:
+              advertiser:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /advertisers/list:
+    get:
+      summary: List all
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /advertisers/parents:
+    get:
+      summary: Get current advertiser parents
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /advertisers/parents/a41d2572-7ded-4ccd-935b-50ecbb58f2e3:
+    get:
+      summary: Get advertiser parents by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /advertisers/childs:
+    get:
+      summary: Get current advertiser childs
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /advertisers/childs/60081f9ba29c6363eb691c66:
+    get:
+      summary: Get advertiser childs by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /advertisers/60081f9ba29c6363eb691c66:
+    delete:
+      summary: Delete by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /profiles:
+    post:
+      summary: create
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              firstname:
+                type: string
+              lastname:
+                type: string
+              email:
+                type: string
+              advertiser:
+                type: string
+              status:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    patch:
+      summary: Update current profile
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              firstname:
+                type: string
+              lastname:
+                type: string
+              email:
+                type: string
+              advertiser:
+                type: string
+              status:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    get:
+      summary: Get current profile
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /profiles/71e9443d-d18b-4150-a195-54d5950bd4c0:
+    patch:
+      summary: Update by id
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              firstname:
+                type: string
+              lastname:
+                type: string
+              email:
+                type: string
+              advertiser:
+                type: string
+              status:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    get:
+      summary: Get by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /profiles/list:
+    get:
+      summary: list
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /profiles/search/eshillam0@netvibes.com:
+    get:
+      summary: search
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /ups/dispatch:
+    patch:
+      summary: Dispatch current Advertiser ups
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              advertiser:
+                type: string
+              quantity:
+                type: number
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /ups:
+    get:
+      summary: Get current advertiser ups
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+    post:
+      summary: Create
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              advertiser:
+                type: string
+              quantity:
+                type: number
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /ups/cc3d6415-b42a-4ba4-b71b-f5e07fb78521:
+    get:
+      summary: Get by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+    delete:
+      summary: Delete by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /ups/list:
+    get:
+      summary: List
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /ups/344ec6a6-0bb5-4c2e-96f5-31146afc1621:
+    patch:
+      summary: Update by id
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              advertiser:
+                type: string
+              quantity:
+                type: number
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /ups/dispatch/8383883ab43c82939392:
+    patch:
+      summary: Dispatch ups by AdvertiserId
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              advertiser:
+                type: string
+              quantity:
+                type: number
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /subscriptions:
+    post:
+      summary: create
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              advertiser:
+                type: string
+              quantity:
+                type: number
+              status:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    get:
+      summary: Get current advertiser subscription
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /subscriptions/sub_1JwRbT2VYug39SBz6yJfE4PP:
+    patch:
+      summary: Update by id
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              advertiser:
+                type: string
+              quantity:
+                type: number
+              status:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /subscriptions/sub_1JwRbT2VYugoKSBz6yJfr39Y:
+    get:
+      summary: Get by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /subscriptions/list:
+    get:
+      summary: List
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /attributes:
+    post:
+      summary: create
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              values:
+                type: array
+                items:
+                  type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /attributes/attribute1:
+    patch:
+      summary: update
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              values:
+                type: array
+                items:
+                  type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    delete:
+      summary: delete
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /attributes/color:
+    get:
+      summary: read
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /attributes/list:
+    get:
+      summary: List
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /acl:
+    post:
+      summary: create
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              scopes:
+                type: array
+                items:
+                  type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /acl/user:
+    patch:
+      summary: update
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              scopes:
+                type: array
+                items:
+                  type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+    get:
+      summary: read
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /acl/list:
+    get:
+      summary: List
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /acl/attribute1:
+    delete:
+      summary: delete
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /invoices/sub_1JwRb90VYugoKSBz6yJfE4KS:
+    get:
+      summary: Get by id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /invoices/subscription/sub_1KJdp0GcXX7p0Z55DCUJrmUA:
+    get:
+      summary: Get by subscription id
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /invoices/list:
+    get:
+      summary: List
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /publisher/boost:
+    post:
+      summary: boost
+      parameters:
+        - in: body
+          name: boost_type
+          schema:
+            type: object
+            properties:
+              boost_type:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /publisher/publish:
+    post:
+      summary: publish
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              products:
+                type: array
+                items:
+                  type: number
+              products_published:
+                type: number
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /password/forgot:
+    post:
+      summary: Forgot password
+      parameters:
+        - in: body
+          name: username
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /password/forgot/confirm:
+    post:
+      summary: Confirm forgot password
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+              code:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /signup/confirm:
+    post:
+      summary: Confirm Sign up
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              code:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /signup:
+    post:
+      summary: Sign up
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              email:
+                type: string
+              password:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /login:
+    post:
+      summary: Login
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /token/{token}:
+    get:
+      summary: Verify token
+      parameters:
+        - in: path
+          name: token
+          type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /token/refresh:
+    post:
+      summary: Refresh token
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              token:
+                type: string
+              refreshToken:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /password/change:
+    post:
+      summary: Change password
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              accessToken:
+                type: string
+              password:
+                type: string
+              newpassword:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+

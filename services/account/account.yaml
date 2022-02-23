@@ -1,0 +1,150 @@
+swagger: '2.0'
+info:
+  title: accounts
+  description: No description
+  version: v1
+schemes:
+  - https
+paths:
+  /password/forgot:
+    post:
+      summary: Forgot password
+      parameters:
+        - in: body
+          name: username
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /password/forgot/confirm:
+    post:
+      summary: Confirm forgot password
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+              code:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /signup/confirm:
+    post:
+      summary: Confirm Sign up
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              code:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /signup:
+    post:
+      summary: Sign up
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              email:
+                type: string
+              password:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /login:
+    post:
+      summary: Login
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /token/{token}:
+    get:
+      summary: Verify token
+      parameters:
+        - in: path
+          name: token
+          type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /token/refresh:
+    post:
+      summary: Refresh token
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              token:
+                type: string
+              refreshToken:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
+  /password/change:
+    post:
+      summary: Change password
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              accessToken:
+                type: string
+              password:
+                type: string
+              newpassword:
+                type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+
